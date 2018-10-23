@@ -1,7 +1,5 @@
 package theme2_flow_control.task7;
 
-import utils.ConsoleHelper;
-
 import java.io.IOException;
 
 import static utils.ConsoleHelper.*;

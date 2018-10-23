@@ -2,7 +2,6 @@ package theme2_flow_control.task3;
 
 import static utils.ConsoleHelper.*;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 
 public class Task3 {

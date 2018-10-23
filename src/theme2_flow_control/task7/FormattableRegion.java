@@ -3,8 +3,8 @@ package theme2_flow_control.task7;
 import java.text.DecimalFormat;
 
 public class FormattableRegion {
-    protected double x;
-    protected double y;
+    private double x;
+    private double y;
 
     public FormattableRegion(double x, double y) {
         if (x <= 0 || y <= 0) {

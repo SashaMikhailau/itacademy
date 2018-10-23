@@ -55,6 +55,24 @@ public class ConsoleHelper {
                 }
             }
     }
+
+    /*Утилитный метод для чтения строки и парсинга ее в Integer.
+Если выкидывается исключение NumberFormatException то ввод повторяется.
+Ошибка ввода вывода пробрасывается выше, т.к. иначе нужно было бы возвращать null при перехвате ошибки
+Аргмуент метода отвечает за дополнительную проверку на отрицательность числа*/
+    public static Integer readIntegerFromConsole(boolean notNegative) throws IOException {
+        while(true){
+            try {
+                Integer number = Integer.parseInt(reader.readLine());
+                if(notNegative && number<0){
+                    throw new NumberFormatException();
+                }
+                return number;
+            } catch (NumberFormatException e) {
+                writeToConsole("Неверный формат ввода. Повторите ввод");
+            }
+        }
+    }
     /*Утилитный метод для чтения строки и парсинга ее в дабл.
        Если выкидывается исключение NumberFormatException то ввод повторяется.
        Ошибка ввода вывода пробрасывается выше, т.к. иначе нужно было бы возвращать null при перехвате ошибки
