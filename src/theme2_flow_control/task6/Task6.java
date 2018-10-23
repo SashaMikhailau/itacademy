@@ -11,7 +11,7 @@ import static utils.ConsoleHelper.*;
 public class Task6 {
     public static void main(String[] args) {
         try {
-            writeToConsole("Введите день месяц год в виде чисел (Например 31 1 2018");
+            writeToConsole("Введите день месяц год в виде чисел (Например 31 1 2018)");
             String[] elements = readStringArrayFromConsole(3);
             int day = Integer.parseInt(elements[0]);
             int month = Integer.parseInt(elements[1]);
@@ -34,7 +34,7 @@ public class Task6 {
                         break;
                 }
             }
-
+            close();
         } catch (IOException e) {
             writeToConsole("Ошибка ввода/вывода");
         } catch (MyDateException e) {

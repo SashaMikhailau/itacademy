@@ -12,6 +12,7 @@ public class Task3 {
             Long number = readLongFromConsole(false);
             String variative = isLastDigitSeven(number) ? "" : "НЕ";
             writeToConsoleWithDecorator(String.format("Последняя цифра введенного вами числа %d %s является 7", number,variative));
+            close();
     }
     /*Метод определяющий является ли последняя цифра числа 7 */
     public static boolean isLastDigitSeven(long number) {

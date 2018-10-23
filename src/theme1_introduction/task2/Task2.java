@@ -26,7 +26,7 @@ public class Task2 {
         }
         resultingtext.append(String.format(" %d %s", results[0], timeUnits[0]));
         writeToConsoleWithDecorator(resultingtext.toString());
-
+        close();
     }
 
 }

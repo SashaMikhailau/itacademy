@@ -13,7 +13,9 @@ public class Task5 {
         writeToConsoleWithDecorator("Введите сумму для добавления к нему слова \"рубль\" в правильном падеже");
         Long number = readLongFromConsole(true);
         writeToConsoleWithDecorator(generateRuble(number));
+        close();
     }
+
     /*Непосредственно метод для генерирования слово рубль в нужном адеже в зависимости от суммы*/
     private static String generateRuble(long number) {
         StringBuilder sb = new StringBuilder();

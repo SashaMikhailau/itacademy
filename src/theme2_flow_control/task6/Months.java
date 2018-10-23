@@ -19,7 +19,7 @@ public enum Months {
     };
 
     public static Months getByOrdinal(int ordinalNumber, boolean visYear) {
-        if (ordinalNumber == 3) {
+        if (ordinalNumber == 2) {
             if(visYear){
                 return VIS_FEBRUARY;
             } else {
