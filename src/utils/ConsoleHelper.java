@@ -3,6 +3,7 @@ package utils;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.InvocationTargetException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -61,7 +62,7 @@ public class ConsoleHelper {
                         }
                     }
                     catch (ReflectiveOperationException e) {
-                        e.printStackTrace();
+                        throw new NumberFormatException();
                     }
 
                 }

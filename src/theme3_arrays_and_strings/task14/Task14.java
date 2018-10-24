@@ -12,6 +12,7 @@ public class Task14 {
         writeToConsoleWithDecorator("Введите целочисленные оценки, разделенные пробелами");
         List<Integer> list = readListOfNumbersFromConsole(Integer.class, true);
         int maxIndex = getMaxIndex(list);
+
         writeToConsoleWithDecorator(String.format("Порядковый номер (начиная с 1) максимальной оценки - %d",maxIndex));
     }
 
