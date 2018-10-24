@@ -3,50 +3,93 @@ package utils;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.DecimalFormat;
 
 public class ConsoleHelper {
+    private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public static void close() throws IOException {
+        reader.close();
+    }
     /*
-    * Утилитный метод для чтения строки текста с консоли*/
-    public static String readFromConsole() {
+    * Утилитный метод для чтения строки текста с консоли.
+    *  Ошибка ввода вывода пробрасывается выше, т.к. иначе нужно было бы возвращать null при перехвате ошибки*/
+    public static String readFromConsole() throws IOException {
+        return reader.readLine();
 
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-            return reader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
+
     }
 
-    public static Long readLongFromConsole() {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-            while(true){
+    /*
+     * Утилитный метод для чтения массива строк указанной длины на основе текста, введенного с консоли.
+     * Если размер массива строк не совпадает с переданным аргументов то цикл ввода повторяется
+     *  Ошибка ввода вывода пробрасывается выше, т.к. иначе нужно было бы возвращать null при перехвате ошибки*/
+    public static String[] readStringArrayFromConsole(int size) throws IOException {
+            while(true) {
                 try {
-                    return Long.parseLong(reader.readLine());
+                    String line = readFromConsole().trim();
+                    String[] words = line.split("\\s+");
+                    if (words.length != size) {
+                        throw new NumberFormatException();
+                    }
+                    return words;
                 } catch (NumberFormatException e) {
                     writeToConsole("Неверный формат ввода. Повторите ввод");
                 }
             }
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 
-    public static Double readDoubleFromConsole() {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+    /*Утилитный метод для чтения строки и парсинга ее в лонг.
+    Если выкидывается исключение NumberFormatException то ввод повторяется.
+    Ошибка ввода вывода пробрасывается выше, т.к. иначе нужно было бы возвращать null при перехвате ошибки
+    Аргмуент метода отвечает за дополнительную проверку на отрицательность числа*/
+    public static Long readLongFromConsole(boolean notNegative) throws IOException {
             while(true){
                 try {
-                    return Double.parseDouble(reader.readLine());
+                    Long number = Long.parseLong(reader.readLine());
+                    if(notNegative && number<0){
+                        throw new NumberFormatException();
+                    }
+                    return number;
                 } catch (NumberFormatException e) {
                     writeToConsole("Неверный формат ввода. Повторите ввод");
                 }
             }
+    }
 
-        } catch (IOException e) {
-            e.printStackTrace();
+    /*Утилитный метод для чтения строки и парсинга ее в Integer.
+Если выкидывается исключение NumberFormatException то ввод повторяется.
+Ошибка ввода вывода пробрасывается выше, т.к. иначе нужно было бы возвращать null при перехвате ошибки
+Аргмуент метода отвечает за дополнительную проверку на отрицательность числа*/
+    public static Integer readIntegerFromConsole(boolean notNegative) throws IOException {
+        while(true){
+            try {
+                Integer number = Integer.parseInt(reader.readLine());
+                if(notNegative && number<0){
+                    throw new NumberFormatException();
+                }
+                return number;
+            } catch (NumberFormatException e) {
+                writeToConsole("Неверный формат ввода. Повторите ввод");
+            }
         }
-        return null;
+    }
+    /*Утилитный метод для чтения строки и парсинга ее в дабл.
+       Если выкидывается исключение NumberFormatException то ввод повторяется.
+       Ошибка ввода вывода пробрасывается выше, т.к. иначе нужно было бы возвращать null при перехвате ошибки
+       Аргмуент метода отвечает за дополнительную проверку на отрицательность числа*/
+    public static Double readDoubleFromConsole(boolean notNegative) throws IOException{
+            while(true){
+                try {
+                    Double number = Double.parseDouble(reader.readLine());
+                    if(notNegative && number<0){
+                        throw new NumberFormatException();
+                    }
+                    return number;
+                } catch (NumberFormatException e) {
+                    writeToConsole("Неверный формат ввода. Повторите ввод");
+                }
+            }
     }
 
     /*Утилитный метод для вывода строки в консоль*/
@@ -54,6 +97,7 @@ public class ConsoleHelper {
         System.out.println(message);
     }
     /*Утилитный метод для вывода строки в консоль с обрамлением в виде двух строк с =*/
+
     public static void writeToConsoleWithDecorator(String message) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < message.length(); i++) {
@@ -62,6 +106,11 @@ public class ConsoleHelper {
         writeToConsole(sb.toString());
         writeToConsole(message);
         writeToConsole(sb.toString());
+    }
+
+    public static String formatDouble(double d) {
+        DecimalFormat decimalFormat = new DecimalFormat("0.###########################################################################");
+        return decimalFormat.format(d);
     }
 
 }

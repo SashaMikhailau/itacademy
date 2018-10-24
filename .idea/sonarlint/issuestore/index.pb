@@ -27,7 +27,5 @@ X
 (src/theme2_flow_control/task6/Month.java,0/c/0cf074ad5483743e69ecbff11446635ab2fd132b
 W
 'src/theme2_flow_control/task6/Year.java,1/b/1b5a3767061a2a07ed52869d9b34318f565e757d
-V
-&src/theme2_flow_control/task6/Day.java,7/2/7289d300afb7f588acb4b0b0b21af26ecf9cb510
 Y
 )src/theme2_flow_control/task6/MyDate.java,3/2/3210c4995fc115509f6fe9baf0dca95d5e142bcd

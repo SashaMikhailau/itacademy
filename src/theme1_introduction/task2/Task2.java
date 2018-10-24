@@ -1,14 +1,17 @@
 package theme1_introduction.task2;
 
+import java.io.IOException;
+
 import static utils.ConsoleHelper.*;
 /*
 Расчет и вывод суток, недель, часов, минут и секунд в количестве введенных секунд
 */
 
 public class Task2 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         writeToConsole("Введите количество секунд для перевода в другие единицы времени");
-        long seconds = Math.abs(readLongFromConsole());
+        Long number = readLongFromConsole(false);
+        long seconds = Math.abs(number);
         StringBuilder resultingtext = new StringBuilder(String.format("В введенном числе (%d)", seconds));
         int[] dividers = {60, 60, 24, 7};
         long[] results = new long[dividers.length+1];
@@ -23,7 +26,7 @@ public class Task2 {
         }
         resultingtext.append(String.format(" %d %s", results[0], timeUnits[0]));
         writeToConsoleWithDecorator(resultingtext.toString());
-
+        close();
     }
 
 }
