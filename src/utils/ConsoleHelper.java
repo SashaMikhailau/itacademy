@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class ConsoleHelper {
     private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -38,7 +41,37 @@ public class ConsoleHelper {
             }
 
     }
+    /*
+     * Написал клевый гибкий метод с участием генериков и рефлекта, который парсит введенную строку в лист необходимых чисел*/
+    public static <T extends Number> List<T> readListOfNumbersFromConsole(Class<T> type, boolean notNegative) throws IOException {
+        while(true) {
+            try {
+                String line = readFromConsole().trim();
+                String[] words = line.split("\\s+");
+                if (words.length == 0) {
+                    throw new NumberFormatException();
+                }
+                List<T> list = new ArrayList<>();
+                for (String s : words) {
+                    try {
+                        T t = (T)type.getMethod("valueOf",String.class).invoke(null,s);
+                        list.add(t);
+                       if (notNegative &&t.doubleValue()<0) {
+                            throw new NumberFormatException();
+                        }
+                    }
+                    catch (ReflectiveOperationException e) {
+                        e.printStackTrace();
+                    }
 
+                }
+                return list;
+            } catch (NumberFormatException e) {
+                writeToConsole("Неверный формат ввода. Повторите ввод");
+            }
+        }
+
+    }
     /*Утилитный метод для чтения строки и парсинга ее в лонг.
     Если выкидывается исключение NumberFormatException то ввод повторяется.
     Ошибка ввода вывода пробрасывается выше, т.к. иначе нужно было бы возвращать null при перехвате ошибки
