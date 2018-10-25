@@ -1,4 +1,10 @@
 
+<<<<<<< Updated upstream
 Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8šÜÉ¯ê,
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(åßéÿşÿÿÿÿ
 d$squid:AssignmentInSubExpressionCheck$".Extract the assignment out of this expression.(ÚçïU8šÜÉ¯ê,
+=======
+d$squid:AssignmentInSubExpressionCheck$".Extract the assignment out of this expression.(ÚçïU8ñˆê,
+Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ñˆê,
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(åßéÿşÿÿÿÿ
+>>>>>>> Stashed changes

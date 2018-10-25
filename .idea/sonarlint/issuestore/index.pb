@@ -29,12 +29,20 @@ W
 'src/theme2_flow_control/task6/Year.java,1/b/1b5a3767061a2a07ed52869d9b34318f565e757d
 Y
 )src/theme2_flow_control/task6/MyDate.java,3/2/3210c4995fc115509f6fe9baf0dca95d5e142bcd
+<<<<<<< Updated upstream
 Y
 )src/theme2_flow_control/task6/Months.java,c/3/c37ee0ecaeae54d327d2c3cb10bce025a53e988d
+=======
+W
+'src/theme2_flow_control/task7/Part.java,8/0/80e6abf4688a2720a0bbec94e39b92373f2ee1de
+X
+(src/theme2_flow_control/task7/House.java,4/8/48980e99222dd1dbbe77c8b5e09f605351de96ff
+>>>>>>> Stashed changes
 ]
 -src/theme2_flow_control/task6/DayOfMonth.java,5/7/573b8fa7f96373073c547fc4e0242cc2512885bf
 b
 2src/theme2_flow_control/task6/MyDateException.java,5/4/5460d4ea251deaf6ce0dc001131588801c2f80e0
+<<<<<<< Updated upstream
 d
 4src/theme2_flow_control/task7/FormattableRegion.java,8/7/872b2904fef77bd5b80cc462bafbfc099966ec14
 X
@@ -45,3 +53,21 @@ X
 0src/theme3_arrays_and_strings/task14/Task14.java,5/5/55b2d71a3afaaa68cb00c337c564e3cf8107dedb
 f
 6src/theme4_classes_and_objects/bonus_antnest/Main.java,c/9/c960fd7ac2503f7dda6142c4297f60c0f9c0c998
+=======
+Y
+)src/theme2_flow_control/task6/Months.java,c/3/c37ee0ecaeae54d327d2c3cb10bce025a53e988d
+X
+(src/theme2_flow_control/task4/Task4.java,4/c/4c0bfd8a419723eda28cd77ea23ee94fdd748933
+S
+#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
+X
+(src/theme2_flow_control/task3/Task3.java,b/8/b8bddb0bb92da87ebf93dfd4a16975d6bc1a498e
+X
+(src/theme2_flow_control/task5/Task5.java,0/f/0fb6156acfb21b18f11eb285d9f4de6fd4c3056e
+X
+(src/theme2_flow_control/task7/Task7.java,c/4/c4ff659ef3bb8d3c62aea97f0c5338d71fb17a5d
+X
+(src/theme2_flow_control/task8/Task8.java,f/5/f582d4736a3f01583608412f6bc6b7c4b16110de
+d
+4src/theme2_flow_control/task7/FormattableRegion.java,8/7/872b2904fef77bd5b80cc462bafbfc099966ec14
+>>>>>>> Stashed changes

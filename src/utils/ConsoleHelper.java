@@ -130,6 +130,11 @@ public class ConsoleHelper {
     public static void writeToConsole(String message) {
         System.out.println(message);
     }
+
+    /*Утилитный метод для вывода строки в консоль без переноса каретки*/
+    public static void writeToConsoleInOneLine(String message) {
+        System.out.print(message);
+    }
     /*Утилитный метод для вывода строки в консоль с обрамлением в виде двух строк с =*/
 
     public static void writeToConsoleWithDecorator(String message) {

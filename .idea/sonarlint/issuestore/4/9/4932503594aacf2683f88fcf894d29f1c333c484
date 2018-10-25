@@ -1,4 +1,9 @@
 
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¿€ÆÚúÿÿÿÿ
+<<<<<<< Updated upstream
 s squid:LabelsShouldNotBeUsedCheck";Refactor the code to remove this label and the need for it.(¦Ë¹üÿÿÿÿ8¸šÅ¯ê,
 `squid:UselessImportCheck"0Remove this unused import 'utils.ConsoleHelper'.(Ÿ„É¢ýÿÿÿÿ8¸šÅ¯ê,
+=======
+s squid:LabelsShouldNotBeUsedCheck";Refactor the code to remove this label and the need for it.(¦Ë¹üÿÿÿÿ8ÎžãŽê,
+`squid:UselessImportCheck"0Remove this unused import 'utils.ConsoleHelper'.(Ÿ„É¢ýÿÿÿÿ8ÎžãŽê,
+>>>>>>> Stashed changes
