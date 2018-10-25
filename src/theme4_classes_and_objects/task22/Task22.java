@@ -1,6 +1,5 @@
 package theme4_classes_and_objects.task22;
 
-
 import static utils.ConsoleHelper.*;
 
 public class Task22 {
@@ -23,8 +22,5 @@ public class Task22 {
         } catch (WrongTImeException e) {
             writeToConsole("Неверный формат даты");
         }
-
-
-
     }
 }
