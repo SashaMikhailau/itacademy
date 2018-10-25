@@ -11,7 +11,7 @@ public class Task16 {
     (при переворачивании нежелательно создавать еще один массив*/
     public static void main(String[] args) {
         Random random = new Random(456);
-       int[] numbers = new int[11];
+       int[] numbers = new int[10];
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = random.nextInt(100);
         }
