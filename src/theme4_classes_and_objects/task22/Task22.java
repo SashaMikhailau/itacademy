@@ -1,6 +1,5 @@
 package theme4_classes_and_objects.task22;
 
-import utils.ConsoleHelper;
 
 import static utils.ConsoleHelper.*;
 
