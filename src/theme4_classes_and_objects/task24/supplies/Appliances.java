@@ -1,5 +1,6 @@
 package theme4_classes_and_objects.task24.supplies;
 
+import theme4_classes_and_objects.task24.Model;
 import utils.ConsoleHelper;
 
 import java.math.BigDecimal;
@@ -7,8 +8,9 @@ import java.util.concurrent.TimeUnit;
 
 /*Бытовая техника*/
 public abstract class Appliances implements Pluggable {
+    private Model model;
     private final String brand;
-    private final String model;
+    private final String mark;
     private final double width;
     private final double height;
     private final double length;
@@ -16,9 +18,10 @@ public abstract class Appliances implements Pluggable {
     private BigDecimal price;
     private boolean turnedOn;
 
-    public Appliances(String brand, String model, double width, double height, double length, BigDecimal price) {
+    public Appliances(Model model,String brand, String mark, double width, double height, double length, BigDecimal price) {
         this.brand = brand;
         this.model = model;
+        this.mark = mark;
         this.width = width;
         this.height = height;
         this.length = length;
@@ -27,11 +30,11 @@ public abstract class Appliances implements Pluggable {
 
     @Override
     public String toString() {
-        return String.format("%s %s %s", getClass().getSimpleName(), brand, model);
+        return String.format("%s %s %s", getClass().getSimpleName(), brand, mark);
     }
 
-    public String getModel() {
-        return model;
+    public String getMark() {
+        return mark;
     }
 
     public String getBrand() {
@@ -48,10 +51,10 @@ public abstract class Appliances implements Pluggable {
                 try {
                     while (true) {
                         TimeUnit.SECONDS.sleep(1);
-                        ConsoleHelper.writeToConsole(String.format("%s is %s",toString(),makeWork()));
+                        model.sendMessage(String.format("%s is %s",toString(),makeWork()));
                     }
                 } catch (InterruptedException e) {
-                    ConsoleHelper.writeToConsole(String.format("%s stopped working",toString()));
+                    model.sendMessage(String.format("%s stopped working",toString()));
                 }
             });
             workingThread.start();
