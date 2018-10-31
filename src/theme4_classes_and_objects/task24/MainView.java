@@ -24,8 +24,6 @@ public class MainView extends Application {
     Создать несколько объектов описанных классов, часть из них включить в розетку.
     Иерархия должна иметь хотя бы три уровня.*/
 
-    /*!!!!В ПРОЦЕССЕ РАЗРАБОТКИ*/
-
     @Override
     public void start(Stage primaryStage) throws Exception {
         VBox pane1 = new VBox();
