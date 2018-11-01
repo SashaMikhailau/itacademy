@@ -10,7 +10,7 @@ public class Main {
     }
 
     @CalcMethodTime
-    public String testMultiply() {
+    public static String testMultiply() {
         BigInteger big = BigInteger.valueOf(1);
         for (int i = 1; i < 40000; i++) {
             big = big.multiply(BigInteger.valueOf(i));
